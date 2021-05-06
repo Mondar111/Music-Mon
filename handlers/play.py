@@ -60,7 +60,22 @@ import json
 import wget
 chat_id = None
 
-                                                  
+           
+
+
+def cb_admin_check(func: Callable) -> Callable:
+    async def decorator(client, cb):
+        admemes = a.get(cb.message.chat.id)
+        if cb.from_user.id in admemes:
+            return await func(client, cb)
+        else:
+            await cb.answer('You ain\'t allowed!', show_alert=True)
+            return
+    return decorator                                                                       
+                                          
+                                          
+                                          
+                                          
 def transcode(filename):
     ffmpeg.input(filename).output("input.raw", format='s16le', acodec='pcm_s16le', ac=2, ar='48k').overwrite_output().run() 
     os.remove(filename)
@@ -155,6 +170,44 @@ async def playlist(client, message):
     
 # ============================= Settings =========================================
 
+def updated_stats(chat, queue, vol=100):
+    if chat.id in callsmusic.pytgcalls.active_calls:
+    #if chat.id in active_chats:
+        stats = 'Pengaturan dari **{}**'.format(chat.title)
+        if len(que) > 0:
+            stats += '\n\n'
+            stats += 'Volume : {}%\n'.format(vol)
+            stats += 'Lagu dalam antrian : `{}`\n'.format(len(que))
+            stats += 'Sedang dimainkan : **{}**\n'.format(queue[0][0])
+            stats += 'Requested by : {}'.format(queue[0][1].mention)
+    else:
+        stats = None
+    return stats
+
+def r_ply(type_):
+    if type_ == 'play':
+        ico = '▶'
+    else:
+        ico = '⏸'
+    mar = InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton('⏹', 'leave'),
+                InlineKeyboardButton('⏸', 'puse'),
+                InlineKeyboardButton('▶️', 'resume'),
+                InlineKeyboardButton('⏭', 'skip')
+                
+            ],
+            [
+                InlineKeyboardButton('Playlist 📖', 'playlist'),
+                
+            ],
+            [       
+                InlineKeyboardButton("❌ Close",'cls')
+            ]        
+        ]
+    )
+    return mar
 
 @Client.on_message(
     filters.command("current")
@@ -169,6 +222,26 @@ async def ee(client, message):
     else:
         await message.reply('Silahkan Nyalakan dulu VCG nya!')
 
+@Client.on_message(
+    filters.command("player")
+    & filters.group
+    & ~ filters.edited
+)
+@authorized_users_only
+async def settings(client, message):
+    playing = None
+    if message.chat.id in callsmusic.pytgcalls.active_calls:
+        playing = True
+    queue = que.get(message.chat.id)
+    stats = updated_stats(message.chat, queue)
+    if stats:
+        if playing:
+            await message.reply(stats, reply_markup=r_ply('pause'))
+            
+        else:
+            await message.reply(stats, reply_markup=r_ply('play'))
+    else:
+        await message.reply('Silahkan Nyalakan dulu VCG nya!')
 
 @Client.on_callback_query(filters.regex(pattern=r'^(playlist)$'))
 async def p_cb(b, cb):
@@ -202,6 +275,7 @@ async def p_cb(b, cb):
         await cb.message.edit(msg)      
 
 @Client.on_callback_query(filters.regex(pattern=r'^(play|pause|skip|leave|puse|resume|menu|cls)$'))
+@cb_admin_check
 async def m_cb(b, cb):
     global que    
     qeue = que.get(cb.message.chat.id)
@@ -426,16 +500,25 @@ async def play(_, message: Message):
         print(str(e))
         return
 
-
     keyboard = InlineKeyboardMarkup(
             [   
                 [
                                
                     InlineKeyboardButton('📖 Daftar Putar', callback_data='playlist'),
+                    InlineKeyboardButton("⛑ Group Support", url="https://t.me/SharingUserbot")
+                
+                ],                     
+                [
+                    InlineKeyboardButton(
+                        "Owner Music Man", url="https://instagram.com/mrismanaziz_"
+                    )
+                ],
+                [       
                     InlineKeyboardButton(
                         text="🗑 Close",
                         callback_data='cls')
-                ]                                        
+
+                ]                             
             ]
         )
     requested_by = message.from_user.first_name
