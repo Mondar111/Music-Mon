@@ -19,7 +19,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 from config import BOT_NAME as bn
 
-
+'''
 @Client.on_message(
     filters.command("start")
     & filters.private
@@ -58,6 +58,7 @@ Saya Memiliki Banyak Fitur Praktis Seperti :
         ),
      disable_web_page_preview=False
     )
+'''
 
 @Client.on_message(
     filters.command("start")
