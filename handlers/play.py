@@ -395,6 +395,38 @@ async def play(_, message: Message):
         return     
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
+    audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
+    url = get_url(message)
+
+    if audio:
+        if round(audio.duration / 60) > DURATION_LIMIT:
+            raise DurationLimitError(
+                f"❌ Videos longer than {DURATION_LIMIT} minute(s) aren't allowed to play!"
+            )
+        keyboard = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton(
+                            text="Join Updates Channel ",
+                            url=f"https://t.me/Lunatic0de")
+
+                    ]
+                ]
+            )
+        file_name = get_file_name(audio)
+        title = file_name
+        thumb_name = "https://telegra.ph/file/f6086f8909fbfeb0844f2.png"
+        thumbnail = thumb_name
+        duration = round(audio.duration / 60)
+        views = "Locally added"
+        requested_by = message.from_user.first_name
+        await generate_cover(requested_by, title, views, duration, thumbnail)  
+        file_path = await converter.convert(
+            (await message.reply_to_message.download(file_name))
+            if not path.isfile(path.join("downloads", file_name)) else file_name
+        )
+
+    else:
     await lel.edit("🔎 **Sedang Mencari Lagu**")
     sender_id = message.from_user.id
     user_id = message.from_user.id
@@ -431,8 +463,10 @@ async def play(_, message: Message):
                 [
                                
                     InlineKeyboardButton('📖 Daftar Putar', callback_data='playlist'),
-                    InlineKeyboardButton('🗑 Tutup', callback_data='cls')
-                ],                                               
+                    InlineKeyboardButton(
+                        text="🗑 Close",
+                        callback_data='cls')
+                ]                                        
             ]
         )
     requested_by = message.from_user.first_name
