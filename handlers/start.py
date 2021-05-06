@@ -20,35 +20,6 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config import BOT_NAME as bn
 
 
-@Client.on_message(filters.command("start") & filters.private & ~filters.channel)
-async def start(_, message: Message):
-    await message.reply_text(
-        f"""Halo 👋! Saya dapat memutar musik dalam obrolan suara Grup Telegram.\n\n✣ Apakah Anda ingin saya memutar musik di obrolan suara grup Telegram Anda? Silakan klik \'📜 Panduan Menggunakan BOT 📜\' tombol di bawah untuk mengetahui bagaimana cara menggunakan saya.\n\n✣ Tambahkan [Assistant Music Man](https://t.me/botmusikman) ke grup Anda untuk memutar musik di obrolan suara grup Anda.\n\nManaged With ☕️ By [Risman](https://t.me/mrismanaziz)""",
-        reply_markup=InlineKeyboardMarkup(
-            [ 
-                [
-                    InlineKeyboardButton(
-                        "📜 Panduan Menggunakan BOT 📜", url="https://t.me/Lunatic0de/20")
-                  ],[
-                    InlineKeyboardButton(
-                        "Group Support", url="https://t.me/SharingUserbot"
-                    ),
-                    InlineKeyboardButton(
-                        "Channel", url="https://t.me/Lunatic0de"
-                    )
-                ]
-            ]
-        ),
-     disable_web_page_preview=True
-    )
-
-
-
-from pyrogram import Client, filters
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-
-
-
 @Client.on_message(
     filters.command("start")
     & filters.private
@@ -63,7 +34,7 @@ async def start_(client: Client, message: Message):
 \n┏━━━━━━━━━━━━━━
 \n┣• Memutar Musik.
 \n┣• Mendownload Lagu.
-\n┣• Mecari Lagu Yang Ingin di Play atau di download.
+\n┣• Mencari Lagu Yang Ingin di Play atau di download.
 \n┣• Klik Tombol » Cara Menggunakan BOT « untuk Mengetahui Fitur Lengkap saya
 \n┗━━━━━━━━━━━━━━
 \n❃ Managed With ☕️ By : [Risman](https://t.me/mrismanaziz)
