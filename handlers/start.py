@@ -27,19 +27,16 @@ from config import BOT_NAME as bn
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""<b>
-\n┗┓ Haii {message.from_user.first_name} My Name is 𝙈𝙐𝙎𝙄𝘾 𝙈𝘼𝙉 ┏┛
-\n\nSaya Bot Music Group, Yang dapat Memutar Lagu di Voice Chat Group Dengan cara yang Mudah
-\nSaya Memiliki Banyak Fitur Praktis Seperti :
-\n┏━━━━━━━━━━━━━━
-\n┣• Memutar Musik.
-\n┣• Mendownload Lagu.
-\n┣• Mencari Lagu Yang Ingin di Play atau di download.
-\n┣• Klik Tombol » Cara Menggunakan BOT « untuk Mengetahui Fitur Lengkap saya
-\n┗━━━━━━━━━━━━━━
-\n❃ Managed With ☕️ By : [Risman](https://t.me/mrismanaziz)
-\n❃ Thanks To : [Risman](https://t.me/mrismanaziz) 
- </b>""",
+        f"""<b>┗┓ Haii {message.from_user.first_name} My Name is 𝙈𝙐𝙎𝙄𝘾 𝙈𝘼𝙉 ┏┛\n
+Saya Bot Music Group, Yang dapat Memutar Lagu di Voice Chat Group Dengan cara yang Mudah
+Saya Memiliki Banyak Fitur Praktis Seperti :
+┏━━━━━━━━━━━━━━
+┣• Memutar Musik.
+┣• Mendownload Lagu.
+┣• Mencari Lagu Yang ingin di Putar atau di Download.
+┗━━━━━━━━━━━━━━
+❃ Managed With ☕️ By : [Risman](https://t.me/mrismanaziz)
+</b>""",
 
 # Edit Yang Perlu Lu ganti 
 # Tapi Jangan di Hapus Thanks To nya Yaaa :D
@@ -69,7 +66,7 @@ async def start_(client: Client, message: Message):
 )
 async def start(client: Client, message: Message):
     await message.reply_text(
-        "💁🏻‍♂️ Apakah Anda ingin mencari video YouTube?",
+        "💁🏻‍♂️ **Apakah Anda ingin mencari Link YouTube?**",
         reply_markup=InlineKeyboardMarkup(
             [   
                 [    
@@ -86,7 +83,6 @@ async def start(client: Client, message: Message):
 
 @Client.on_message(
     filters.command("help")
-    & filters.private
     & filters.group
     & ~ filters.edited
 )
@@ -111,7 +107,7 @@ async def help(client: Client, message: Message):
     & ~ filters.edited
 )
 async def reload(client: Client, message: Message):
-    await message.reply_text("""✅ **Pemutar Musik Sedang Online **\n\n• **Daftar admin** telah **diperbarui**""",
+    await message.reply_text("""✅ Bot **berhasil dimulai ulang!**\n\n• **Daftar admin** telah **diperbarui**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
