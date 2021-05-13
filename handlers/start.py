@@ -19,7 +19,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 
 from config import BOT_NAME as bn
 
-'''
+
 @Client.on_message(
     filters.command("start")
     & filters.private
@@ -60,7 +60,7 @@ Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
         ),
      disable_web_page_preview=False
     )
-'''
+
 
 @Client.on_message(
     filters.command("start")
