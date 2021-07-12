@@ -1,9 +1,9 @@
 {
-  "name": "Music Man",
-  "logo": "https://telegra.ph/file/36ff1b571aa11df5812de.jpg",
+  "name": "Music Mandir",
+  "logo": "https://telegra.ph/file/1bb535d67904320923847.jpg",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/mrismanaziz/Music-Man",
+  "repository": "https://github.com/m0ndar111/Music-Mandir",
   "stack": "heroku-20",
   "buildpacks": [
    {
@@ -34,12 +34,12 @@
     "SUPPORT_GROUP": {
       "description": "Grup dukungan MusicPlayer Anda tanpa @ [skip ini jika Anda tidak punya]",
       "required": false,
-      "value": "SharingUserbot"
+      "value": "FAMILYNIRVANA"
     },
     "PROJECT_NAME": {
       "description": "Nama proyek MusicPlayer Anda.",
       "required": false,
-      "value": "𝙈𝙐𝙎𝙄𝘾 𝙈𝘼𝙉"
+      "value": "𝙈𝙐𝙎𝙄𝘾 𝙈𝙊𝙉𝘿𝘼𝙍 𝙈𝘼𝙉𝘿𝙄𝙍"
     },
     "ASSISTANT_NAME": {
       "description": "Username Telegram asisten MusicPlayer Anda tanpa @",
@@ -53,12 +53,12 @@
     "BG_IMAGE": {
       "description": "Custom Background Play Musik Gunakan Foto yang Transparant format .png / .jpg",
       "required": false,
-      "value": "https://telegra.ph/file/cd0b87484429704c7b935.png"
+      "value": "https://telegra.ph/file/e9a725eb55f2c91a1d2f9.png"
     },     
     "UPDATES_CHANNEL": {
       "description": "Updates Channel tanpa @ [skip ini jika Anda tidak punya]",
       "required": false,
-      "value": "Lunatic0de"
+      "value": "FAMILYNVN"
     },    
     "API_ID": {
       "description": "Masukan APP ID Silahkan Ambil dari my.telegram.org/apps atau t.me/scrapmanbot",
