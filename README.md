@@ -22,7 +22,7 @@
 
 ### 💜 Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/m0ndar111/Music-Mandir/tree/master)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mondar111/Music-Mon/tree/master)
 
 Get pyrogram (p)  `SESSION` from here:
 [![Run on Repl.it](https://repl.it/badge/github/SpEcHiDe/GenerateStringSession)](https://repl.it/@mrismanaziz/stringenSession?lite=1&outputonly=1)
@@ -73,7 +73,7 @@ Don't edit this part
 This bot is based on the original work done by [Rojserbest](http://github.com/rojserbest). Without his hardwork Music Man won't exist. Music-Man is a modified version of [Callsmusic](https://github.com/callsmusic/callsmusic)
 
 #### Contribtors
-- [Risman](https://github.com/mrismanaziz)
+- [mondar](https://github.com/mondar111)
 - [InukaASiTH](https://github.com/InukaAsith): Dev
 - [Technical-Hunter](https://github.com/Technical-Hunter): Dev
 - [Rojserbest](http://github.com/rojserbest): Dev
