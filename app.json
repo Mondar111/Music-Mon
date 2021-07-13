@@ -1,9 +1,9 @@
 {
-  "name": "Music Mandir",
+  "name": "Music Mondar Mandir",
   "logo": "https://telegra.ph/file/1bb535d67904320923847.jpg",
   "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/m0ndar111/Music-Mandir",
+  "repository": "https://github.com/mondar111/Music-Mon",
   "stack": "heroku-20",
   "buildpacks": [
    {
