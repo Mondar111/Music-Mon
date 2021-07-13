@@ -1,4 +1,4 @@
-<h1 align="centre">🎵 MUSIK MONDAR MANDIR🎵</h1>
+<h1 align="centre">🎵 MUSIK MONDAR🎵</h1>
 
 ### A bot that can play music on Telegram Group and Channel Voice Chats
 #### POWERED BY [MARSHALX TGCALLS](https://github.com/MarshalX/tgcalls)
