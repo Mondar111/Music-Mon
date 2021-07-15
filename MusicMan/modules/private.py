@@ -49,7 +49,7 @@ Saya Memiliki Banyak Fitur Praktis Seperti :
 ┣• Gunakan Perintah » /help « untuk Mengetahui Fitur Lengkap saya
 ┗━━━━━━━━━━━━━━
 ❃ Managed With ❤ By {OWNER}
-❃ Thanks To [Mondar](https://t.me/FAM1LY)
+❃ Thanks To [Mondar111](https://t.me/mondarajedah)
 ━━━━━━━━━━━━━━━
 Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
 </b>""",
