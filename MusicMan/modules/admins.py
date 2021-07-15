@@ -54,7 +54,7 @@ async def update_admin(client, message: Message):
                         "Group Support", url="https://t.me/familynirvana"
                     ),
                     InlineKeyboardButton(
-                        "Owner", url="https://t.me/FAM1LY"
+                        "Owner", url="https://t.me/mondarajedah"
                     )
                 ]
             ]
