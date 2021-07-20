@@ -69,7 +69,7 @@ Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
                         "⛑ Group Support", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "📨 DONASI 📨", url=f"https://{MONDARAJEDAH}")
+                        "🛠 Source Code 🛠", url=f"https://{SOURCE_CODE}")
                 ]
             ]
         ),
@@ -125,7 +125,7 @@ def map(pos):
             ],
             [
                 InlineKeyboardButton(
-                    text='📨 DONASI 📨', url=f"https://{MONDARAJEDAH}"
+                    text='🛠 Source Code 🛠", url=f"https://{SOURCE_CODE}"
                 )
             ],
             [InlineKeyboardButton(text='«', callback_data=f"help+{pos-1}")],
