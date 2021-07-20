@@ -533,7 +533,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("⛑ Group Support", url="https://t.me/FAMILYNIRVANA"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton("📨 DONASI 📨", url="https://t.me/mondarajedah")],
             ]
         )
         file_name = get_file_name(audio)
@@ -590,7 +590,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("⛑ Group Support", url="https://t.me/FAMILYNIRVANA"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton("📨 DONASI 📨", url="https://t.me/mondarajedah")],
             ]
         )
         requested_by = message.from_user.first_name
@@ -675,7 +675,7 @@ async def play(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("⛑ Group Support", url="https://t.me/FAMILYNIRVANA"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton("📨 DONASI 📨", url="https://t.me/mondarajedah")],
             ]
         )
             requested_by = message.from_user.first_name
@@ -820,7 +820,7 @@ async def ytplay(_, message: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("⛑ Group Support", url="https://t.me/FAMILYNIRVANA"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton("📨 DONASI 📨", url="https://t.me/mondarajedah")],
             ]
         )
     requested_by = message.from_user.first_name
@@ -953,7 +953,7 @@ async def deezer(client: Client, message_: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("⛑ Group Support", url="https://t.me/FAMILYNIRVANA"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton("📨 DONASI 📨", url="https://t.me/mondarajedah")],
             ]
         )
     file_path = await convert(wget.download(url))
@@ -1084,7 +1084,7 @@ async def jiosaavn(client: Client, message_: Message):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("⛑ Group Support", url="https://t.me/FAMILYNIRVANA"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton("📨 DONASI 📨", url="https://t.me/mondarajedah")],
             ]
         )
     file_path = await convert(wget.download(slink))
@@ -1188,7 +1188,7 @@ async def lol_cb(b, cb):
                     InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
                     InlineKeyboardButton("⛑ Group Support", url="https://t.me/FAMILYNIRVANA"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton("📨 DONASI 📨", url="https://t.me/mondarajedah")],
             ]
         )
     requested_by = useer_name
