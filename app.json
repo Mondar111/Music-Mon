@@ -39,7 +39,7 @@
     "PROJECT_NAME": {
       "description": "Nama proyek MusicPlayer Anda.",
       "required": false,
-      "value": "𝙈𝙐𝙎𝙄𝘾 𝙈𝙊𝙉𝘿𝘼𝙍 𝙈𝘼𝙉𝘿𝙄𝙍"
+      "value": "𝙈𝙐𝙎𝙄𝘾 𝙈𝙊𝙉𝘿𝘼𝙍"
     },
     "ASSISTANT_NAME": {
       "description": "Username Telegram asisten MusicPlayer Anda tanpa @",
@@ -61,7 +61,7 @@
       "value": "FAMILYNVN"
     },    
     "API_ID": {
-      "description": "Masukan APP ID Silahkan Ambil dari my.telegram.org/apps atau t.me/scrapmanbot",
+      "description": "Masukan APP ID Silahkan Ambil dari my.telegram.org/apps atau t.me/mondarubot",
       "required": true
     },
     "PMPERMIT": {
@@ -70,13 +70,13 @@
       "value": "ENABLE"
     },    
     "API_HASH": {
-      "description": "Masukan API HASH Silahkan Ambil dari my.telegram.org/apps atau t.me/scrapmanbot",
+      "description": "Masukan API HASH Silahkan Ambil dari my.telegram.org/apps atau t.me/mondarubot",
       "required": true
     },
     "SUDO_USERS": {
       "description": "Daftar User ID Telegram pengguna dihitung sebagai admin di semua tempat (pemisah menggunakan space)",
       "required": true,
-      "value": "844432220"
+      "value": " contoh 844432220"
     },
     "DURATION_LIMIT": {
       "description": "Batas durasi audio maksimal untuk download (hitungan menit)",
